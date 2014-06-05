@@ -1,0 +1,33 @@
+doctype html
+html(ng-app="myApp")
+  head
+    meta(charset='utf8')
+    base(href='/')
+    title Departments, employees and salaries
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/app.css')
+  body
+    div.navbar.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          a.brand(href="/") Employees
+
+    div.container
+      div.row
+        div.span12
+          div(ng-controller='MainCtrl')
+            ng-view
+
+      div.footer
+        p &copy; Company 2012
+
+    script(src='js/lib/angular/angular.js')
+    script(src='js/lib/angular/angular-resource.js')
+    script(src='js/app.js')
+    script(src='js/services.js')
+    script(src='js/controllers/EmployeesEditCtrl.js')
+    script(src='js/controllers/EmployeesIndexCtrl.js')
+    script(src='js/controllers/EmployeesDepartmentCtrl.js')
+    script(src='js/controllers/EmployeesShowCtrl.js')
+    script(src='js/controllers/EmployeesDestroyCtrl.js')
+    script(src='js/controllers/MainCtrl.js')
