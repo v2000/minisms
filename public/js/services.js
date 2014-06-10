@@ -61,7 +61,7 @@ app.factory("Department", function($resource, $http) {
 });
 
 app.factory("Category", function($resource, $http) {
-  var resource = $resource("/api/categorys/:id", { id: "@_id" },
+  var resource = $resource("/api/categories/:id", { id: "@_id" },
     {
       'create':  { method: 'POST' },
       'index':   { method: 'GET', isArray: true },

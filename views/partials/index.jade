@@ -1,7 +1,7 @@
 h3 Articles
 
 div Number of articles: {{articles.length}}  
-div Number of categories: {{categorys.length}}
+div Number of categories: {{categories.length}}
   p
 //div(ng-switch="!!articles.length")
   //table.table.table-striped(ng-switch-when="true")
@@ -28,7 +28,7 @@ div.row
         p {{article.smallbody}}
 
   div.col-md-4 
-      div(ng-repeat="category in categorys")
+      div(ng-repeat="category in categories")
         p
           b {{category.name}} 
 

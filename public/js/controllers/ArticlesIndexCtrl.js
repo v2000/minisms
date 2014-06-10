@@ -1,6 +1,6 @@
-app.controller("ArticlesIndexCtrl", function($scope, $location, Article, Category) {
+app.controller("ArticlesIndexCtrl", function($scope, $location, Article, Category, Department) {
   $scope.articles = Article.index();
-  $scope.categorys = Category.index();
+  $scope.categories = Category.index();
 
 
    $scope.newArticle = function() {

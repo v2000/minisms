@@ -8,5 +8,5 @@ var autoREST = require("../libs/autoREST");
 
 // API routes for Department
 var routes = exports.routes = autoREST.buildRoutes(
-  "Category", "categorys:ALL"
+  "Category", "categories:ALL"
 );
