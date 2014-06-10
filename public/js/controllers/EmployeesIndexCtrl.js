@@ -4,4 +4,5 @@ app.controller("EmployeesIndexCtrl", function($scope, $location, Employee) {
   $scope.new = function() {
     $location.path("/employees/new");
   };
+
 });

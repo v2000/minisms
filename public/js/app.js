@@ -6,7 +6,7 @@ var app = angular.module('myApp', ["ngResource"]).config([
     $locationProvider.html5Mode(true);
     $routeProvider
       .when("/employees", {
-        templateUrl: "partials/index.jade",
+        templateUrl: "partials/indexbegin.jade",
         controller: "EmployeesIndexCtrl"
       })
       .when("/employees/new", {
@@ -33,8 +33,44 @@ var app = angular.module('myApp', ["ngResource"]).config([
         templateUrl: "partials/show.jade",
         controller: "EmployeesDestroyCtrl"
       })
+      //.otherwise({
+      //  redirectTo: "/employees"
+      //})
+
+
+
+
+
+      .when("/articles", {
+        templateUrl: "partials/index.jade",
+        controller: "ArticlesIndexCtrl"
+      })
+      .when("/articles/new", {
+        templateUrl: "partials/edit.jade",
+        controller: "EmployeesEditCtrl"
+      })
+      .when("/articles/new/:depId", {
+        templateUrl: "partials/edit.jade",
+        controller: "EmployeesEditCtrl"
+      })
+      .when("/articles/:id", {
+        templateUrl: "partials/show.jade",
+        controller: "EmployeesShowCtrl"
+      })
+      .when("/articles/department/:id", {
+        templateUrl: "partials/showDepartment.jade",
+        controller: "EmployeesDepartmentCtrl"
+      })
+      .when("/articles/:id/edit", {
+        templateUrl: "partials/edit.jade",
+        controller: "EmployeesEditCtrl"
+      })
+      .when("/articles/:id/delete", {
+        templateUrl: "partials/show.jade",
+        controller: "EmployeesDestroyCtrl"
+      })
       .otherwise({
-        redirectTo: "/employees"
+        redirectTo: "/articles"
       });
     }
 ]);

@@ -1,29 +1,52 @@
-h3 Employees
+h3 Articles
 
-div(style="margin-bottom:20px") Number of employees: {{employees.length}}
+div Number of articles: {{articles.length}}  
+div Number of categories: {{categorys.length}}
+  p
+//div(ng-switch="!!articles.length")
+  //table.table.table-striped(ng-switch-when="true")
+    //thead
+      //td Article
+   
+    //tbody
+      //tr(ng-repeat="article in articles")
+        //td {{article.title}} {{article.smallbody}}
 
-div(ng-switch="!!employees.length")
-  table.table.table-striped(ng-switch-when="true")
-    thead
-      td P-number
-      td First Name
-      td Last Name
-      td Salary
-      td Department
-      td Actions
-    tbody
-      tr(ng-repeat="employee in employees")
-        td {{employee.pno}}
-        td {{employee.firstname}}
-        td {{employee.lastname}}
-        td {{employee.salary}}
-        td 
-          a(href="/employees/department/{{employee.departmentId}}") {{employee.department}}
-        td
-          a(href="/employees/{{employee._id}}") Show
-          span(style="display:inline-block;width:20px")
-          a(href="/employees/{{employee._id}}/edit") Edit
-          span(style="display:inline-block;width:20px")
-          a(href="/employees/{{employee._id}}/delete") Delete
 
-button.btn.btn-success(ng-click="new()") New Employee
+ 
+  //div (ng-repeat="article in articles") {{article.title}}
+  //  {{article.smallbody}}
+
+
+
+//<div class="row">
+//  <div class="col-md-6">.col-md-6</div>
+//  <div class="col-md-6">.col-md-6</div>
+//</div>
+
+
+
+
+div.row
+  div.col-md-8
+      div(ng-repeat="article in articles")
+        p
+          b {{article.title}} 
+        p {{article.smallbody}}
+
+  div.col-md-4
+      div(ng-repeat="category in categorys")
+        p
+          b {{category.name}} 
+
+
+
+
+button.btn.btn-success(ng-click="newArticle()") New Article
+
+div.row
+  div.col-md-8 AAAAAAAAAAAAAAAAAA
+  div.col-md-4 BBBBBBBBBBBBBBBBBB
+
+
+
