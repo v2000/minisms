@@ -19,13 +19,6 @@ div Number of categories: {{categorys.length}}
 
 
 
-//<div class="row">
-//  <div class="col-md-6">.col-md-6</div>
-//  <div class="col-md-6">.col-md-6</div>
-//</div>
-
-
-
 
 div.row
   div.col-md-8
@@ -34,7 +27,7 @@ div.row
           b {{article.title}} 
         p {{article.smallbody}}
 
-  div.col-md-4
+  div.col-md-4 
       div(ng-repeat="category in categorys")
         p
           b {{category.name}} 
@@ -44,9 +37,10 @@ div.row
 
 button.btn.btn-success(ng-click="newArticle()") New Article
 
+
 div.row
-  div.col-md-8 AAAAAAAAAAAAAAAAAA
-  div.col-md-4 BBBBBBBBBBBBBBBBBB
+  div.col-md-8 AAAAAAAAAAAA
+     
 
-
-
+  div.col-md-4 CCCCCCCCCCCCCC
+     
