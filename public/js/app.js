@@ -36,11 +36,39 @@ var app = angular.module('myApp', ["ngResource"]).config([
       //.otherwise({
       //  redirectTo: "/employees"
       //})
+//admin
+      .when("/apmin-panel", {
+        templateUrl: "partials/article.jade",
+        controller: "ArticlesIndexCtrl"
+      })
+      .when("/articles/new", {
+        templateUrl: "partials/edit.jade",
+        controller: "EmployeesEditCtrl"
+      })
+      .when("/articles/new/:depId", {
+        templateUrl: "partials/edit.jade",
+        controller: "EmployeesEditCtrl"
+      })
+      .when("/articles/:id", {
+        templateUrl: "partials/show.jade",
+        controller: "EmployeesShowCtrl"
+      })
+      .when("/articles/department/:id", {
+        templateUrl: "partials/showDepartment.jade",
+        controller: "EmployeesDepartmentCtrl"
+      })
+      .when("/articles/:id/edit", {
+        templateUrl: "partials/edit.jade",
+        controller: "EmployeesEditCtrl"
+      })
+      .when("/articles/:id/delete", {
+        templateUrl: "partials/show.jade",
+        controller: "EmployeesDestroyCtrl"
+      })
 
 
 
-
-
+//visitors
       .when("/articles", {
         templateUrl: "partials/article.jade",
         controller: "ArticlesIndexCtrl"
