@@ -2,7 +2,7 @@ h3 Articles
 
 div Number of articles: {{articles.length}}  
 div Number of categories: {{categories.length}}
-  p
+
 //div(ng-switch="!!articles.length")
   //table.table.table-striped(ng-switch-when="true")
     //thead
@@ -24,7 +24,9 @@ div.row
   div.col-md-8
       div(ng-repeat="article in articles")
         p
-          b {{article.title}} 
+          b {{article.title}}
+          b {{article.date}}
+          b {{article.author}}
         p {{article.smallbody}}
 
   div.col-md-4 

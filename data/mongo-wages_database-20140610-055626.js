@@ -13,26 +13,13 @@ db.getCollection("categories").ensureIndex({
   
 ]);
 
-/** contacts indexes **/
-db.getCollection("contacts").ensureIndex({
-  "_id": NumberInt(1)
+/** users indexes **/
+db.getCollection("users").ensureIndex({
+    "_id": NumberInt(1)
 },[
-  
+
 ]);
 
-/** departments indexes **/
-db.getCollection("departments").ensureIndex({
-  "_id": NumberInt(1)
-},[
-  
-]);
-
-/** employees indexes **/
-db.getCollection("employees").ensureIndex({
-  "_id": NumberInt(1)
-},[
-  
-]);
 
 /** articles records **/
 db.getCollection("articles").insert({

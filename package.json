@@ -1,5 +1,5 @@
 {
-    "name": "contacts"
+    "name": "minicms" //change this name on project level
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
