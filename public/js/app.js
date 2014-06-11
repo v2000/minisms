@@ -37,7 +37,7 @@ var app = angular.module('myApp', ["ngResource"]).config([
       //  redirectTo: "/employees"
       //})
 //admin
-      .when("/apmin-panel", {
+      .when("/admin-panel", {
         templateUrl: "partials/article.jade",
         controller: "ArticlesIndexCtrl"
       })
