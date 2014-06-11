@@ -29,20 +29,14 @@ div.row
           b {{article.author}}
         p {{article.smallbody}}
 
-  div.col-md-4 
+      button.btn.btn-success(ng-click="newArticle()") New Article
+      br
+      br
+      div.col-md-4 
+      p
+        b Category:
       div(ng-repeat="category in categories")
-        p
-          b {{category.name}} 
+        p {{category.name}} 
 
-
-
-
-button.btn.btn-success(ng-click="newArticle()") New Article
-
-
-div.row
-  div.col-md-8 AAAAAAAAAAAA
-     
-
-  div.col-md-4 CCCCCCCCCCCCCC
-     
+      p
+        b Arkiv:

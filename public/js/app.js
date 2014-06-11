@@ -42,7 +42,7 @@ var app = angular.module('myApp', ["ngResource"]).config([
 
 
       .when("/articles", {
-        templateUrl: "partials/index.jade",
+        templateUrl: "partials/article.jade",
         controller: "ArticlesIndexCtrl"
       })
       .when("/articles/new", {
