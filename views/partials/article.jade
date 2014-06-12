@@ -35,13 +35,10 @@ div.row
       div.col-md-4 
       p
         b Category:
-      div(ng-repeat="category in categories")
-        p {{category.name}} 
-
-      div ***************************************************
 
       div(ng-repeat="category in categories")
-        a(href="/categories/category/{{article.categoryId}}") {{category}}
+        p
+          a(href="/categories/category/{{article.categoryId}}") {{category.name}}
 
       p
         b Arkiv:
