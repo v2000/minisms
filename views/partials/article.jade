@@ -24,7 +24,7 @@ div.row
   div.col-md-8
       div(ng-repeat="article in articles")
         p
-          b {{article.title}}
+          a(href="/articles/{{article._id}}") {{article.title}}
           b {{article.date}}
           b {{article.author}}
         p {{article.smallbody}}
@@ -37,6 +37,11 @@ div.row
         b Category:
       div(ng-repeat="category in categories")
         p {{category.name}} 
+
+      div ***************************************************
+
+      div(ng-repeat="category in categories")
+        a(href="/categories/category/{{article.categoryId}}") {{category}}
 
       p
         b Arkiv:

@@ -82,8 +82,8 @@ var app = angular.module('myApp', ["ngResource"]).config([
         controller: "EmployeesEditCtrl"
       })
       .when("/articles/:id", {
-        templateUrl: "partials/show.jade",
-        controller: "EmployeesShowCtrl"
+        templateUrl: "partials/showArticle.jade",
+        controller: "ArticlesShowCtrl"
       })
       .when("/articles/department/:id", {
         templateUrl: "partials/showDepartment.jade",
