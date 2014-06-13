@@ -9,21 +9,24 @@ html(ng-app="myAppAdmin")
         link(rel='stylesheet', href='/css/app.css')
         link(rel='stylesheet', href='/admin/css/app.css')
     body
-        div.navbar.navbar-fixed-top
-            div.navbar-inner
-                div.container
-                    a.brand(href="/") Articles
-        div.container
-            div.row
-                div.span12
-                    div(ng-controller='MainCtrl')
-                        ng-view
+
             div.footer
                 p &copy; Verajulia 2014
         script(src='js/lib/angular/angular.js')
         script(src='js/lib/angular/angular-resource.js')
         script(src='js/app.js')
-        script(src='/admin/ja.app.ja')
+        script(src='/admin/js/app.js')
+        script(src='/admin/js/factory.js')
+        script(src='/admin/js/controllers/admincontroller.js')
+        script(src='/admin/js/controllers/adminmenucontroller.js')
+        script(src='/admin/js/controllers/articleaddcontroller.js')
+        script(src='/admin/js/controllers/articlescontroller.js')
+        script(src='/admin/js/controllers/cotegoriesaddcontroller.js')
+        script(src='/admin/js/controllers/categoriescontroller.js')
+        script(src='/admin/js/controllers/errorcontroller.js')
+        script(src='/admin/js/controllers/logincontroller.js')
+        script(src='/admin/js/controllers/userscontroller.js')
+        script(src='/admin/js/tinymce/tinymce.min.js')
         script(src='js/services.js')
         script(src='js/controllers/EmployeesEditCtrl.js')
         script(src='js/controllers/EmployeesIndexCtrl.js')

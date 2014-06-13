@@ -1,0 +1,29 @@
+//Created by juliarietveld on 11/06/14.
+div#menu_wrapper(ng-init="menu_template_src = '/admin/templates/include/menu.html'" ng-include src="menu_template_src")
+    div.container
+        div#form_container
+            table.listview
+                thead
+                    th Id
+                    th Title
+                    th url
+                    th Category
+                    th Date
+                    th Author
+                    th Exerpt
+                    th Edit
+                    th Delete
+                tr(ng-repeat="item in articles")
+                    td {{ article.index+1 }}
+                    td.center {{ article.id }}
+                    td {{ article.title }}
+                    td {{ article.url }}
+                    td {{ article.category }}
+                    td {{ article.date }}
+                    td {{ article.author }}
+                    td {{ article.exerpt }}
+                    td: a(href="{{ article.edit_url }}") Edit
+                    td: a(href="#" data-deleteurl="{{ article.delete_url}}" ng-click="confirmDelete($event)") Delete
+                tr
+                    td 'No records to display'
+

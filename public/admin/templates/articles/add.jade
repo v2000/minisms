@@ -1,0 +1,18 @@
+//Created by juliarietveld on 11/06/14.
+div#menu_wrapper(ng-init="menu_template_src = '/admin/templates/include/menu.html'" ng-include src="menu_template_src")
+    div.container
+        div#form_container
+            form#add_article(action={{action_url}} method='POST' action="somepage")
+                label Title
+                    input(type="text" name="title" value="{{edit.title}}")
+                label Short description
+                    textarea(name="short_description content" cols="20" rows="10"){{edit.short_description}}
+                label Description
+                    textarea(name="description content" cols="50" rows="10"){{edit.description}}
+                label Image
+                    input(type="file" name="image" value='Choose file')
+                label Select category
+                    select(name="category")
+                        option Select
+                        option(ng-repeat="item in categories" value="{{article.id}}" selected="{{item.selected}}"){{article.title}}
+            button#submit_article(ng-click="save()") Submit

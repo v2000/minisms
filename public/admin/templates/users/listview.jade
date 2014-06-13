@@ -1,0 +1,29 @@
+div#menu_wrapper(ng-init=menu_template_src = '/admin/templates/include/menu.html' ng-include src=menu_template_src)
+    div#container
+    div#form_container
+        table.listview
+            thead
+            th {{myObj['ID']}}
+            th {{myObj['Name']}}
+            th {{myObj['Surname']}}
+            th {{myObj['Username']}}
+            th {{myObj['Email']}}
+            th {{myObj['Created']}}
+            th {{myObj['Edit']}}
+            th {{myObj['Delete']}}
+
+            tbody
+            tr(ng-repeat="item in users")
+                td {{$index+1}}
+                td.center {{item._id}}
+                td {{item.name.first}}
+                td {{item.name.last}}
+                td {{item.username}}
+                td {{item.email}}
+                td {{item.date}}
+
+                td.center: a(href={{item.edit_url}}) Edit
+                td.center: a(href=# data-deleteurl={{item.delete_url}} ng-click=confirmDelete($event)) Delete
+
+            tr
+                td(colspan=8 class=center nodata{{myObj['No records to display']}})

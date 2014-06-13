@@ -1,0 +1,17 @@
+div#menu_wrapper(ng-init="menu_template_src = '/admin/templates/include/menu.html'" ng-include src="menu_template_src")
+    div#container
+    div#form_container
+        form#add_category
+            div.left
+                label {{myObj['Title']}}
+                input(type="text" name="title" value="{{edit.title}}")
+                label {{myObj['Short description']}}
+                textarea(name="short_description" cols="50" rows="10"{{edit.short_description}})
+            div.left category
+                label {{myObj['Select category']}}
+                select(name="parent_category")
+                    option(value="") Select/option
+                    option(ng-repeat="item in categories" value="{{item._id}}"  selected="{{item.selected}}"{{item.title}})
+                input(type="hidden" name="id" value="{{edit._id}}")
+            div.clear
+            button#submit_category(ng-click="save()"{{myObj['Submit']}})
