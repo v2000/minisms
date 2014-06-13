@@ -75,19 +75,19 @@ var app = angular.module('myApp', ["ngResource"]).config([
       })
       .when("/articles/new", {
         templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
+        controller: "ArticlesEditCtrl"
       })
       .when("/articles/new/:depId", {
         templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
+        controller: "ArticlesEditCtrl"
       })
       .when("/articles/:id", {
         templateUrl: "partials/showArticle.jade",
         controller: "ArticlesShowCtrl"
       })
-      .when("/articles/department/:id", {
-        templateUrl: "partials/showDepartment.jade",
-        controller: "EmployeesDepartmentCtrl"
+      .when("/articles/category/:id", {
+        templateUrl: "partials/showCategory.jade",
+        controller: "ArticlesCategoryCtrl"
       })
       .when("/articles/:id/edit", {
         templateUrl: "partials/edit.jade",

@@ -1,0 +1,9 @@
+h3 Category: 
+	p {{category.name}}
+		div Number of articles in {{category.name}}: {{articles.length}}
+			div(ng-repeat="article in articles")
+				a(href="/articles/{{article._id}}") {{article.title}}
+				p {{article.smallbody}}
+
+a.btn(href="/articles") Back
+	

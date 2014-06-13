@@ -36,9 +36,13 @@ div.row
       p
         b Category:
 
-      div(ng-repeat="category in categories")
-        p
-          a(href="/categories/category/{{article.categoryId}}") {{category.name}}
+      div(ng-repeat="article in articles")
+          p
+            a(href="/articles/category/{{article.categoryId}}") {{article.category}}
 
       p
         b Arkiv:
+
+      div(ng-repeat="article in articles")
+          p
+            a(href="/articles/category/{{article.categoryId}}") {{article.category}}

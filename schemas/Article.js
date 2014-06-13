@@ -3,7 +3,8 @@ exports.schema = {
   title: String,
   smallbody: String,
   body: String,
-  categoryId: Number,
+  categoryId: String,
+  data: String,
 };
 
 // Require autoREST-library
@@ -15,14 +16,14 @@ var routes = exports.routes = autoREST.buildRoutes(
 );
 
 // List of employeers - modify with a join on department
-/*autoREST.modify(routes["GET:articles"],{
+autoREST.modify(routes["GET:articles"],{
   populate: {
     join: "Category",
     joinOn: ["categoryId", "_id"],
     filter: "name",
     toProperty: "category"
   }
-});*/
+});
 
 // One employee - modify with join on department
 // (reusing the join from our previous route)
