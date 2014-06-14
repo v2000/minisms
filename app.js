@@ -2,6 +2,7 @@
 var express = require('express');
 var routes = require('./routes');
 
+
 var app = module.exports = express();
 
 app.configure(function(){
@@ -30,7 +31,7 @@ app.get('/partials/:name', routes.partials);
 require("./libs/autoREST").registerSchemas({
   app: app,
   db: "wages_database",
-  schemas: ["Department", "Employee", "Article", "Category"]
+  schemas: ["Article", "Category"]
 });
 
 // Take care of routes not defined

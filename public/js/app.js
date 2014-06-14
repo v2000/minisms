@@ -5,34 +5,6 @@ var app = angular.module('myApp', ["ngResource"]).config([
   function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
-      .when("/employees", {
-        templateUrl: "partials/indexbegin.jade",
-        controller: "EmployeesIndexCtrl"
-      })
-      .when("/employees/new", {
-        templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
-      })
-      .when("/employees/new/:depId", {
-        templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
-      })
-      .when("/employees/:id", {
-        templateUrl: "partials/show.jade",
-        controller: "EmployeesShowCtrl"
-      })
-      .when("/employees/department/:id", {
-        templateUrl: "partials/showDepartment.jade",
-        controller: "EmployeesDepartmentCtrl"
-      })
-      .when("/employees/:id/edit", {
-        templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
-      })
-      .when("/employees/:id/delete", {
-        templateUrl: "partials/show.jade",
-        controller: "EmployeesDestroyCtrl"
-      })
       //.otherwise({
       //  redirectTo: "/employees"
       //})
@@ -41,30 +13,7 @@ var app = angular.module('myApp', ["ngResource"]).config([
         templateUrl: "partials/article.jade",
         controller: "ArticlesIndexCtrl"
       })
-      .when("/articles/new", {
-        templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
-      })
-      .when("/articles/new/:depId", {
-        templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
-      })
-      .when("/articles/:id", {
-        templateUrl: "partials/show.jade",
-        controller: "EmployeesShowCtrl"
-      })
-      .when("/articles/department/:id", {
-        templateUrl: "partials/showDepartment.jade",
-        controller: "EmployeesDepartmentCtrl"
-      })
-      .when("/articles/:id/edit", {
-        templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
-      })
-      .when("/articles/:id/delete", {
-        templateUrl: "partials/show.jade",
-        controller: "EmployeesDestroyCtrl"
-      })
+     
 
 
 
@@ -88,14 +37,6 @@ var app = angular.module('myApp', ["ngResource"]).config([
       .when("/articles/category/:id", {
         templateUrl: "partials/showCategory.jade",
         controller: "ArticlesCategoryCtrl"
-      })
-      .when("/articles/:id/edit", {
-        templateUrl: "partials/edit.jade",
-        controller: "EmployeesEditCtrl"
-      })
-      .when("/articles/:id/delete", {
-        templateUrl: "partials/show.jade",
-        controller: "EmployeesDestroyCtrl"
       })
       .otherwise({
         redirectTo: "/articles"
